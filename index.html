@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <h1 class="titulo">yan.dev</h1>
+        <h2 class="subtitulo">Front-End Developer</h2>
+      </div>
+      <div class="box">
+        <ul class="table">
+          <li><a href="">Sobre mim</a></li>
+          <li><a href="">meus Projetos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function typeWriter(elemento) {
+        const textArray = elemento.innerHTML.split("");
+        elemento.innerHTML = "";
+        textArray.forEach((letra, i) => {
+          setTimeout(() => (elemento.innerHTML += letra), 100 * i);
+        });
+      }
+
+      const subtitle = document.querySelector("h2");
+      typeWriter(subtitle);
+    </script>
+  </body>
+</html>
